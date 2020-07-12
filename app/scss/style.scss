@@ -1,3 +1,205 @@
 @import 'vars';
 @import 'global';
 @import 'fonts';
+.header__top {
+    background-color: $bg;
+}
+
+.header__top-inner {
+    display: flex;
+    justify-content: space-between;
+    height: 100px;
+    align-items: center;
+}
+
+.header__top-btn {
+    padding: 10px 20px;
+    background-color: $blue;
+    box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.1);
+    border-radius: 25px;
+    a {
+        color: #fff;
+        font-size: 14px;
+        line-height: 28px;
+    }
+}
+
+.header__menu-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 80px;
+}
+
+.menu__list {
+    li {
+        display: inline-block;
+        &+li {
+            margin-left: 30px;
+        }
+    }
+    a {
+        font-size: 15px;
+        font-weight: 500;
+        text-transform: uppercase;
+        color: #333;
+    }
+}
+
+.header__menu-search {
+    max-width: 360px;
+    width: 100%;
+}
+
+.menu-search__form {
+    position: relative;
+    input {
+        display: block;
+        width: 100%;
+        height: 45px;
+        padding-left: 26px;
+        outline: none;
+        padding-right: 80px;
+        border-radius: 25px;
+        border: 1px solid #d9dfe5;
+        &::placeholder {
+            color: #898f96;
+        }
+    }
+    button {
+        font-family: 'Linearicons-Free';
+        position: absolute;
+        color: #fff;
+        background-color: $blue;
+        border-radius: 25px;
+        height: 45px;
+        width: 70px;
+        outline: none;
+        border: none;
+        right: 0;
+        top: 0;
+        cursor: pointer;
+    }
+}
+
+.create {
+    background-image: linear-gradient( 180deg, rgb(0, 48, 222) 0%, rgb(23, 69, 237) 54%, rgb(46, 90, 251) 80%);
+}
+
+.create__inner {
+    text-align: center;
+    padding: 180px 0 230px;
+    max-width: 880px;
+    color: $white;
+    margin: 0 auto;
+    &-title {
+        font-size: 60px;
+        line-height: 70px;
+        margin-bottom: 40px;
+        span {
+            display: block;
+            font-weight: 700;
+        }
+    }
+    &-text {
+        font-size: 20px;
+        font-weight: 500;
+        margin-bottom: 65px;
+    }
+    &-btn {
+        a {
+            padding: 16px 30px;
+            border: 1px solid #fff;
+            color: #fff;
+            border-radius: 30px;
+            &:hover {
+                background-color: #fff;
+                color: $blue;
+                transition: all .3s;
+            }
+            &+a {
+                margin-left: 30px;
+            }
+        }
+    }
+}
+
+.search {
+    position: relative;
+}
+
+.search__inner-shadow {
+    max-width: 1140px;
+    width: 100%;
+    height: 50px;
+    border-radius: 6px;
+    background-color: #fff;
+    opacity: 0.502;
+    margin-left: 15px;
+    position: absolute;
+    bottom: 35px;
+    z-index: 4;
+}
+
+.search__inner-shadow-2 {
+    max-width: 1110px;
+    bottom: 50px;
+    margin-left: 30px;
+}
+
+.search__inner {
+    max-width: 1170px;
+    width: 100%;
+    box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.08);
+    padding: 25px 40px;
+    align-items: center;
+    border-radius: 6px;
+    background-color: #fff;
+    position: absolute;
+    bottom: -35px;
+    z-index: 5;
+}
+
+.search__inner-form {
+    input {
+        max-width: 610px;
+        border: 1px solid #dcdcdc;
+        border-top-left-radius: 6px;
+        border-bottom-left-radius: 6px;
+        height: 55px;
+        padding: 0 25px 0 25px;
+        color: #606060;
+        outline: none;
+        width: 100%;
+    }
+    select {
+        position: relative;
+        width: 200px;
+        border-top-right-radius: 6px;
+        border-bottom-right-radius: 6px;
+        padding: 0 20px 0 20px;
+        margin-left: -6px;
+        color: #606060;
+        height: 55px;
+        border: 1px solid #dcdcdc;
+        background-image: url('../images/chevron-down.png');
+        background-repeat: no-repeat;
+        background-position: right 20px center;
+        appearance: none;
+        outline: none;
+        cursor: pointer;
+        transition: all 0.5s;
+    }
+}
+
+button {
+    margin-left: 28px;
+    border-radius: 6px;
+    height: 55px;
+    background-color: $blue;
+    border: none;
+    color: #fff;
+    outline: none;
+    width: 220px;
+    cursor: pointer;
+}
