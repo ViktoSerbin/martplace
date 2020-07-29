@@ -1,6 +1,6 @@
-@import 'vars';
-@import 'global';
-@import 'fonts';
+@import "vars";
+@import "global";
+@import "fonts";
 
 // start header
 .header__top {
@@ -20,7 +20,7 @@
     .notification,
     .message,
     .basket {
-        font-family: 'Linearicons-Free';
+        font-family: "Linearicons-Free";
         font-size: 20px;
         color: #7e8fa1;
     }
@@ -29,7 +29,7 @@
         width: 35px;
         height: 35px;
         span {
-            font-family: 'Quicksand', sans-serif;
+            font-family: "Quicksand", sans-serif;
             font-weight: 500;
             position: absolute;
             min-width: 25px;
@@ -107,7 +107,7 @@
 .menu__list {
     li {
         display: inline-block;
-        &+li {
+        & + li {
             margin-left: 30px;
         }
     }
@@ -140,7 +140,7 @@
         }
     }
     button {
-        font-family: 'Linearicons-Free';
+        font-family: "Linearicons-Free";
         position: absolute;
         color: #fff;
         background-color: $blue;
@@ -158,7 +158,7 @@
 
 // start create
 .create {
-    background-image: linear-gradient( 180deg, rgb(0, 48, 222) 0%, rgb(23, 69, 237) 54%, rgb(46, 90, 251) 80%);
+    background-image: linear-gradient(180deg, rgb(0, 48, 222) 0%, rgb(23, 69, 237) 54%, rgb(46, 90, 251) 80%);
 }
 
 .create__inner {
@@ -190,9 +190,9 @@
             &:hover {
                 background-color: #fff;
                 color: $blue;
-                transition: all .3s;
+                transition: all 0.3s;
             }
-            &+a {
+            & + a {
                 margin-left: 30px;
             }
         }
@@ -260,7 +260,7 @@
         color: #606060;
         height: 55px;
         border: 1px solid #dcdcdc;
-        background-image: url('../images/chevron-down.png');
+        background-image: url("../images/chevron-down.png");
         background-repeat: no-repeat;
         background-position: right 20px center;
         appearance: none;
@@ -299,7 +299,7 @@
     max-width: 360px;
     padding: 32px;
     border-radius: 4px;
-    transition: all .3s;
+    transition: all 0.3s;
     &-images {
         margin-bottom: 20px;
         height: 120px;
@@ -448,7 +448,7 @@
             }
             .product-slider__item-list {
                 .item-list__icon {
-                    font-family: 'Linearicons-Free';
+                    font-family: "Linearicons-Free";
                     font-size: 15px;
                 }
                 span + span {
@@ -464,7 +464,7 @@
                     color: $blue;
                 }
                 span {
-                    font-family: 'Quicksand', sans-serif;
+                    font-family: "Quicksand", sans-serif;
                     margin-left: 10px;
                 }
             }
@@ -512,7 +512,7 @@
         position: relative;
     }
     .products__bottom-btn {
-        background-image: url('../images/icons/filter.png');
+        background-image: url("../images/icons/filter.png");
         background-repeat: no-repeat;
         background-position: center;
         border: none;
@@ -576,13 +576,18 @@
             height: 230px;
             border-top-right-radius: 4px;
             border-top-left-radius: 4px;
-        } 
+        }
         .item-img__list {
             position: absolute;
             bottom: 9px;
             border-top-right-radius: 4px;
             border-top-left-radius: 4px;
-            background-image: linear-gradient( 270deg, rgb(6,116,236) 0%, rgb(61,94,215) 46%, rgb(115,71,193) 100%);
+            background-image: linear-gradient(
+                270deg,
+                rgb(6, 116, 236) 0%,
+                rgb(61, 94, 215) 46%,
+                rgb(115, 71, 193) 100%
+            );
             display: flex;
             height: 0;
             justify-content: center;
@@ -603,7 +608,7 @@
                 &:hover {
                     background-color: #fff;
                     color: $blue;
-                    transition: all .3s;
+                    transition: all 0.3s;
                 }
             }
         }
@@ -650,7 +655,6 @@
         color: $purple;
         background-repeat: no-repeat;
         background-position: left 7px;
-
     }
 }
 
@@ -715,7 +719,6 @@
     }
 }
 
-  
 // end products
 
 // start followerslist
@@ -741,7 +744,7 @@
     .slick-prev {
         right: 115px;
     }
-    
+
     .slick-next {
         right: 70px;
     }
@@ -760,7 +763,6 @@
     flex-basis: 0;
     margin-left: 0;
 }
-
 
 // end followerslist
 
@@ -888,7 +890,7 @@
         color: #555;
     }
 }
-  
+
 // end benefits
 
 // start proposal
@@ -957,7 +959,7 @@
         margin-bottom: 55px;
     }
 }
-  
+
 .feedback__inner {
     display: flex;
     text-align: left;
@@ -1012,8 +1014,6 @@
     border-radius: 25px;
     color: #fff;
 }
-
-
 
 // end feedback
 
@@ -1081,28 +1081,211 @@
             color: #999;
             &::before {
                 color: $blue;
-                font-family: 'Linearicons-Free';
+                font-family: "Linearicons-Free";
             }
         }
         .news__item-comments {
             border-left: 1px solid #ececec;
             padding: 10px 0px 10px 30px;
             &::before {
-                font-family: 'Linearicons-Free';
+                font-family: "Linearicons-Free";
             }
         }
         .news__item-views {
             padding: 10px 0px;
             &::before {
-                font-family: 'Linearicons-Free';
+                font-family: "Linearicons-Free";
             }
         }
-
     }
-
 }
 
 // end news
 
+// start privilege
 
+.privilege__inner {
+    display: flex;
+    .privilege__item + .privilege__item {
+        border-left: 1px solid #e8eaf3;
+    }
+    .privilege__item {
+        width: 50%;
+        text-align: center;
+        padding: 60px 30px;
+        &-icons {
+            margin-bottom: 25px;
+        }
+        &-title {
+            font-size: 24px;
+            color: #000;
+            span {
+                color: $blue;
+            }
+        }
+    }
+    .privilege__item-title--support {
+        span {
+            color: $purple;
+        }
+    }
+}
 
+// end privilege
+
+// start join
+
+.join {
+    background-image: linear-gradient(270deg, rgb(13, 62, 242) 0%, rgb(64, 48, 201) 46%, rgb(114, 33, 160) 100%);
+    opacity: 0.902;
+    padding: 110px 20px;
+    text-align: center;
+    color: #fff;
+}
+
+.join__inner-title {
+    font-size: 36px;
+    margin-bottom: 25px;
+}
+
+.join__inner-text {
+    font-size: 18px;
+    margin-bottom: 50px;
+}
+
+.join__inner-btn {
+    background-color: #fff;
+    padding: 10px 40px;
+    color: $blue;
+    border-radius: 25px;
+}
+
+// end join
+
+// start footer
+
+.footer {
+    background-color: #262b30;
+    &__inner {
+        display: flex;
+        justify-content: space-between;
+        padding: 100px 0 80px;
+        color: #ababab;
+        font-size: 15px;
+    }
+    .footer__col {
+        max-width: 270px;
+        width: 100%;
+        &-menu {
+            max-width: 135px;
+        }
+        &-social {
+            max-width: 365px;
+        }
+        &-title {
+            font-size: 18px;
+            color: #fff;
+            margin-top: 20px;
+            margin-bottom: 30px;
+        }
+        &-logo {
+            margin-top: 0;
+        }
+        .footer__col-text,
+        .footer__social-text {
+            line-height: 28px;
+            margin-bottom: 30px;
+        }
+        .footer__info {
+            padding-left: 30px;
+            margin-bottom: 5px;
+            color: #ababab;
+            line-height: 26px;
+            position: relative;
+            &::before {
+                position: absolute;
+                left: 0;
+                font-family: 'Linearicons-Free';
+                font-size: 16px;
+                color: #fff;
+            }
+            &-phone {
+                &::before {
+                    content: "\e830";
+                }
+            }
+            &-email {
+                &::before {
+                    content: "\e818";
+                }
+            }
+            &-adres {
+                &::before {
+                    top: 15px;
+                    content: "\e833";
+                }
+            }
+        }
+        &-list {
+            li {
+                height: 15px;
+            }
+            li + li {
+                margin-top: 15px;
+            }
+            a {
+                color: #ababab;
+                font-size: 15px;
+                line-height: 15px;
+            }
+        }
+    }
+    .footer__form {
+        margin-bottom: 45px;
+        position: relative;
+        input {
+            border: none;
+            outline: none;
+            background-color: #fff;
+            padding: 0 120px 0 30px;
+            border-radius: 25px;
+            height: 50px;
+            width: 100%;
+        }
+        button {
+            position: absolute;
+            top: 0;
+            right: 0;
+            border: none;
+            outline: none;
+            background-color: $blue;
+            color: #fff;
+            height: 100%;
+            width: 110px;
+            border-radius: 25px;
+            cursor: pointer;
+        }
+    }
+    .footer__social-link {
+        li {
+            display: inline-block;
+        }
+        li + li {
+            margin-left: 10px;
+        }
+    }
+    .footer__copy {
+        text-align: center;
+        padding: 35px 20px;
+        background-color: #192027;
+        color: #999999;
+        font-size: 15px;
+        .footer__copy-text {
+            span {
+                color: #fff;
+            }
+        }
+    }
+}
+
+// end footer
