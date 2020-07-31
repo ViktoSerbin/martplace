@@ -178,10 +178,12 @@
     height: 0;
     top: 100px;
     border-top: 0px solid $blue;
+    box-shadow: 0px 5px 40px 0px rgba(82, 85, 90, 0.2);
     border-radius: 0 0 4px 4px;
     right: 0;
     overflow: hidden;
     z-index: 5;
+    transition: all .3s;
     .circle__item {
         display: flex;
         padding: 20px 25px 20px 25px;
@@ -264,6 +266,172 @@
     .basket__btn-checkout {
         background-color: $blue;
         border-radius: 0 0 4px 0;
+    }
+}
+
+.message__menu {
+    width: 370px;
+    .circle__title-box {
+        display: flex;
+        justify-content: space-between;
+        padding: 25px;
+        .circle__title {
+            font-size: 18px;
+            color: #000;
+        }
+        .circle__title-link {
+            font-size: 15px;
+            color: $blue;
+            &:hover {
+                color: #000;
+            }
+        }
+    }
+    .circle__item {
+        border-top: 1px solid #e8ebf0;
+        border-bottom: none;
+        width: 100%;
+    }
+    .circlr__images {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        margin-top: 3px;
+        margin-right: 14px;
+        border: 1px solid #3a2c29;
+    }
+    .circle__content {
+        position: relative;
+        span {
+            position: absolute;
+            top: 0;
+            right: -18px;
+            font-size: 14px;
+            line-height: 20px;
+            color: $blue;
+        }
+    }
+    .circle__name {
+        font-weight: 500;
+        line-height: 20px;
+        color: #333;
+        &::after {
+            content: "\e818";
+            font-family: 'Linearicons-Free';
+            margin-left: 10px;
+            color: $blue;
+            font-size: 15px;
+        }
+    }
+    .circle__message {
+        font-size: 15px;
+        color: #555;
+    }
+    .circle-forwardmessages {
+        .circle__name {
+            &::after {
+                content: "\e860";
+                color: #747a86;
+            }
+        }
+        .circle__content {
+            span {
+                color: #747a86;
+            }
+        }
+    }
+    .circle-readmessages {
+        .circle__name {
+            &::after {
+                content: "";
+            }
+        }
+        .circle__content {
+            span {
+                color: #747a86;
+            }
+        }
+    }
+}
+
+.notification__menu {
+    width: 370px;
+    left: -35px;
+    .circle__title-box {
+        display: flex;
+        justify-content: space-between;
+        padding: 25px;
+        .circle__title {
+            font-size: 18px;
+            color: #000;
+        }
+        .circle__title-link {
+            font-size: 15px;
+            color: $blue;
+            &:hover {
+                color: #000;
+            }
+        }
+    }
+    .circle__item {
+        border-top: 1px solid #e8ebf0;
+        border-bottom: none;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        .circle__item-icon {
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            background-color: #f1ecf9;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            &::before {
+                font-family: 'Linearicons-Free';
+            }
+        }
+        .lnr-heart {
+            color: $blue;
+        }
+        .lnr-bubble {
+            color: $purple;
+        }
+        .lnr-cart {
+            color: $tomato;
+        }
+        .lnr-star {
+            color: $green;
+        }
+    }
+    .circlr__images {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        margin-top: 3px;
+        margin-right: 14px;
+        border: 1px solid #3a2c29;
+    }
+    .circle__content {
+        line-height: 20px;
+        width: 235px;
+    }
+    .circle__name {
+        font-weight: 500;
+        color: #000;
+        span {
+            font-size: 15px;
+            color: #747a86;
+        }
+    }
+    .circle__message {
+        font-size: 15px;
+        font-weight: 500;
+        color: $blue;
+    }
+    .circle__date {
+        font-size: 14px;
+        color: #747a86;
     }
 }
 
