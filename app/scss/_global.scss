@@ -64,3 +64,35 @@ body {
     color: #000;
     line-height: 28px;
 }
+
+.breadcrumbs {
+    &__inner {
+        text-align: center;
+        overflow: hidden;
+        width: 1170px;
+    }
+    &__list {
+        li {
+            display: inline-block;
+            & + li {
+                padding-left: 24px;
+                position: relative;
+                &::before {
+                    content: "/";
+                    position: absolute;
+                    left: 8px;
+                    color: #fff;
+                }
+            }
+            &:last-child {
+                a,
+                span {
+                    color: #bfcad7;
+                }
+            }
+        }
+        a {
+            color: #fff;
+        }
+    }
+}
