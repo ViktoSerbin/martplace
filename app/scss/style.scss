@@ -1915,10 +1915,10 @@
             border-radius: 4px;
             padding: 10px 20px 7px;
             border: 1px solid #eceff2;
-            button + button {
+            a + a {
                 margin-left: 10px;
             }
-            button {
+            a {
                 outline: none;
                 border: none;
                 background-color: #fff;
@@ -2279,5 +2279,137 @@
         }
     }
 }
-  
+
+.product-page__content--list {
+    margin-left: 30px;
+    width: 100%;
+    .pagination__list {
+        margin-top: 75px;
+    }
+}
+
+.product-page__items--list {
+    display: flex;
+    border-radius: 4px;
+    height: 210px;
+    background-color: #fff;
+    box-shadow: 0px 2px 4px 0px rgba(108, 111, 115, 0.1);
+    margin-bottom: 30px;
+    .products__list-img {
+        display: block;
+        width: 230px;
+        object-fit: cover;
+        border-radius: 4px 0 0 4px;
+    }
+}
+
+.product-page__item--list {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    .product__item-list--content {
+        width: 240px;
+        padding-right: 20px;
+        border-right: 1px solid #ececec;
+        .product__list-name {
+            font-size: 18px;
+            line-height: 24px;
+            color: #000;
+            font-weight: 500;
+            margin-bottom: 15px;
+            &:hover {
+                color: $blue;
+            }
+        }
+        .product__list-text {
+            color: #555;
+            margin-bottom: 20px;
+        }
+        .product__list-category {
+            font-size: 15px;
+            line-height: 15px;
+            padding-left: 20px;
+            color: $purple;
+            background-repeat: no-repeat;
+            background-position: 0 0;
+            &:hover {
+                color: $blue;
+            }
+        }
+    }
+    .product__item-list--info {
+        border-right: 1px solid #ececec;
+        width: 220px;
+        padding: 21px 20px;
+        .product__list-author {
+            display: flex;
+            margin-bottom: 24px;
+            .product__list-author--img {
+                width: 30px;
+                height: 30px;
+                border-radius: 50%;
+                border: 1px solid $purple;
+                margin-right: 7px;
+            }
+            .product__list-author--name {
+                font-size: 15px;
+                color: #000;
+                &:hover {
+                    color: $blue;
+                }
+            }
+        }
+        span {
+            display: block;
+            font-size: 15px;
+            line-height: 15px;
+            color: #6f7d8d;
+            margin-bottom: 15px;
+            &::before {
+                font-size: 15px;
+                color: $purple;
+                font-family: 'Linearicons-Free';
+                margin-right: 6px;
+            }
+        }
+        .product__list-star {
+            display: flex;
+            font-size: 15px;
+            line-height: 15px;
+            .rate-star {
+                padding: 0;
+                padding-right: 10px;
+            }
+            span {
+                margin: 0;
+            }
+        }
+    }
+    .product__list-box {
+        padding-left: 20px;
+        width: 150px;
+        text-align: center;
+        color: $blue;
+        font-size: 15px;
+        line-height: 15px;
+        .product-page__item-price {
+            font-weight: 500;
+            background-color: #e6f1fd;
+            border-radius: 25px;
+            padding: 7px 15px;
+            margin-bottom: 25px;
+        }
+        .product-page__item-bought {
+            span {
+                &::before {
+                    font-size: 15px;
+                    margin-right: 10px;
+                    font-family: 'Linearicons-Free';
+                }
+            }
+        }
+    }
+}
+
+
 // end product-page
