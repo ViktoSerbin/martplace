@@ -31,16 +31,33 @@ $(function () {
         prefix: "$"
     });
 
+    $('.product-one__tabs .tab, .settings__tabs .tab').on('click', function (event) {
+        var id = $(this).attr('data-id');
+        $('.product-one__tabs, .settings__tabs').find('.tab-item').removeClass('active-tab').hide();
+        $('.product-one__tabs .tabs, .settings__tabs .tabs').find('.tab').removeClass('active');
+        $(this).addClass('active');
+        $('#' + id).addClass('active-tab').fadeIn();
+        return false;
+    });
+
+    $('.price-box__check1').on('click', function(){
+        $('.price-box__check2').removeClass('price-box__check--active');
+        $('.price-box__check1').addClass('price-box__check--active');
+    });
+
+    $('.price-box__check2').on('click', function(){
+        $('.price-box__check1').removeClass('price-box__check--active');
+        $('.price-box__check2').addClass('price-box__check--active');
+    });
+
     $('input[type="checkbox"], select').styler();
 
     $('.list-btn').on('click', function () {
-        // $('.product__item').addClass('list');
         $('.list-btn').addClass('active');
         $('.grid-btn').removeClass('active')
     });
 
     $('.grid-btn').on('click', function () {
-        // $('.product__item').removeClass('list');
         $('.grid-btn').addClass('active');
         $('.list-btn').removeClass('active');
     });
