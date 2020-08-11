@@ -3128,3 +3128,178 @@
 }
 
 // end howitworks
+
+// start pricing-plan
+
+.pricing-plan {
+    background-color: #eff1f5;
+    padding: 115px 0;
+}
+
+.pricing-plan__title {
+    text-align: center;
+    font-size: 36px;
+    color: #000;
+    margin-bottom: 30px;
+    span {
+        color: $blue;
+    }
+}
+
+.pricing-plan__text {
+    text-align: center;
+    margin: 0 auto;
+    color: #555;
+    max-width: 675px;
+    margin-bottom: 55px;
+}
+
+.started__item {
+    border-top: 3px solid #ff6a6c;
+    .pricing-plan__btn {
+        background-color: #ff6a6c;
+    }
+}
+
+.business__item {
+    border-top: 3px solid $blue;
+    .pricing-plan__btn {
+        background-color: $blue;
+    }
+}
+
+.agency__item {
+    border-top: 3px solid #feb71d;
+    .pricing-plan__btn {
+        background-color: #feb71d;
+    }
+}
+
+.pricing-plan__inner {
+    display: flex;
+    justify-content: space-between;
+    .pricing-plan__item {
+        max-width: 360px;
+        width: 100%;
+        background-color: #fff;
+        box-shadow: 0px 2px 4px 0px rgba(108, 111, 115, 0.1);
+        border-radius: 4px;
+        padding: 25px;
+        &-title {
+            text-align: center;
+            font-size: 30px;
+            font-weight: 500;
+            color: #000;
+            padding-bottom: 25px;
+            border-bottom: 1px solid #e8ebf0;
+            margin-bottom: 25px;
+        }
+        &-price {
+            text-align: center;
+            font-size: 36px;
+            color: #000;
+            margin-bottom: 35px;
+            sup {
+                font-size: 18px;
+                color: #000;
+            }
+            span {
+                font-size: 16px;
+                color: #555;
+            }
+        }
+        &-list {
+            color: #555;
+            margin-bottom: 30px;
+            span {
+                font-weight: 500;
+                color: #000;
+            }
+            li {
+                display: flex;
+                align-items: center;
+                padding-left: 25px;
+                position: relative;
+                &::before {
+                    content: "";
+                    left: 0;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    width: 7px;
+                    height: 7px;
+                    background: #c5cad4;
+                    border-radius: 200px;
+                    position: absolute;
+                }
+            }
+            .pricing-plan--circle {
+                display: inline-block;
+                &:hover {
+                    
+                }
+                &::after {
+                    content: "\e87d";
+                    font-family: 'Linearicons-Free';
+                    font-size: 18px;
+                    margin-left: 10px;
+                    color: #555;
+                    cursor: pointer;
+                }
+            }
+        }
+        .pricing-plan__btn {
+            text-align: center;
+            border-radius: 4px;
+            box-shadow: 0px 4px 30px 0px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            padding: 15px;
+            font-size: 18px;
+            line-height: 18px;
+            color: #fff;
+            &:hover {
+                background-color: $purple;
+                transition: all .3s;
+            }
+        }
+    }
+}
+
+.tooltip {
+    position: relative;
+    display: inline-block;
+}
+
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width: 300px;
+    background-color: #000;
+    box-shadow: 0px 4px 30px 0px rgba(0, 0, 0, 0.1);
+    color: #fff;
+    text-align: center;
+    padding: 20px 45px;
+    border-radius: 5px;
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    margin: 0;
+    margin-left: -145px;
+    z-index: 5;
+}
+
+.tooltip .tooltiptext::after {
+    content: " ";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #000 transparent transparent transparent;
+}
+
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+    transition: all .3s ease;
+}
+  
+// end pricing-plan
