@@ -40,6 +40,15 @@ $(function () {
         return false;
     });
 
+    $('.popular-latest__item .tab, .settings__tabs .tab').on('click', function (event) {
+        var id = $(this).attr('data-id');
+        $('.popular-latest__item, .settings__tabs').find('.tab-item').removeClass('active-tab').hide();
+        $('.popular-latest__item .tabs, .settings__tabs .tabs').find('.tab').removeClass('active');
+        $(this).addClass('active');
+        $('#' + id).addClass('active-tab').fadeIn();
+        return false;
+    });
+
     $('.price-box__check1').on('click', function(){
         $('.price-box__check2').removeClass('price-box__check--active');
         $('.price-box__check1').addClass('price-box__check--active');
