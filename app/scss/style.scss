@@ -14,7 +14,12 @@
     align-items: center;
 }
 
-.header__top-box {
+.header__btn-menu {
+    display: none;
+}
+
+.header__top-box,
+.header__top-infoo {
     display: flex;
     align-items: center;
     .notification,
@@ -3763,3 +3768,5 @@
 }
 
 // end 404
+
+@import "media";

@@ -71,7 +71,17 @@ $(function () {
         $('.list-btn').removeClass('active');
     });
 
+    $('.menu__btn').on('click', function () {
+        $('.menu__list').slideToggle();
+    });
 
+    $('.header__btn-menu').on('click', function () {
+        $('.header__top-box').toggleClass('active');
+    });
+
+    $('.drop-down ').on('click', function(){
+        $(this).children('.menu__drop-down').toggleClass('active');
+      }); 
 
     var mixer = mixitup('.products__inner-box');
 
