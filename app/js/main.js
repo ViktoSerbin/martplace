@@ -12,6 +12,14 @@ $(function () {
         slidesToScroll: 1,
         prevArrow: '<button type="button" class="slick-arrow slick-prev"><img src="images/chevron-left.png" alt="Previous arrow"></button>',
         nextArrow: '<button type="button" class="slick-arrow slick-next"><img src="images/chevron-right.png" alt="Next arrow"></button>',
+        responsive: [
+            {
+              breakpoint: 600,
+              settings: {
+                  arrows: false,
+              }
+            },
+          ]
     });
 
     $(".followerslist__inner").slick({
@@ -20,6 +28,22 @@ $(function () {
         infinite: false,
         prevArrow: '<button type="button" class="slick-arrow slick-prev"><img src="images/chevron-left.png" alt="Previous arrow"></button>',
         nextArrow: '<button type="button" class="slick-arrow slick-next"><img src="images/chevron-right.png" alt="Next arrow"></button>',
+        responsive: [
+            {
+              breakpoint: 1200,
+              settings: {
+                slidesToShow: 2,
+                slidesToScroll: 1,
+              }
+            },
+            {
+                breakpoint: 800,
+                settings: {
+                  slidesToShow: 1,
+                  arrows: false,
+                }
+              },
+          ]
     });
 
     $(".js-range-slider").ionRangeSlider({
